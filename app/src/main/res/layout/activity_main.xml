@@ -5,8 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.courtcounter.MainActivity"
-    android:orientation="vertical">
-
+    android:orientation="horizontal">
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+        android:layout_weight="1"
+    android:orientation="vertical"
+        android:paddingRight="16dp"
+        >
     <TextView
         android:text="TEAM A"
         android:layout_width="wrap_content"
@@ -29,19 +35,67 @@
         android:layout_width="match_parent"
         android:text="+3 points"
         android:layout_marginBottom="16dp"
-        android:onClick="threePoint"
+        android:onClick="A_threePoint"
         />
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="+2 points"
         android:layout_marginBottom="16dp"
-        android:onClick="twoPoint"
+        android:onClick="A_twoPoint"
         />
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Free throw "
-        android:onClick="onePoint"
+        android:textAllCaps="true"
+        android:onClick="A_free_throw"
         />
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:text="TEAM B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            />
+        <TextView
+            android:id="@+id/team_b_score"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="+3 points"
+            android:layout_marginBottom="16dp"
+            android:onClick="B_threePoint"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="+2 points"
+            android:layout_marginBottom="16dp"
+            android:onClick="B_twoPoint"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Free throw "
+            android:textAllCaps="true"
+            android:onClick="B_free_throw"
+            />
+    </LinearLayout>
+
 </LinearLayout>
