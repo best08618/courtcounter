@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
     int scoreA = 0;
     int scoreB = 0;
-
+//SCROE A
     public void A_threePoint(View view)
     {   scoreA= scoreA + 3 ;
         displayForTeamA(scoreA);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     {    scoreA++;
         displayForTeamA(scoreA);
     }
-
+//SCORE B
     public void B_threePoint(View view)
     {   scoreB= scoreB + 3 ;
         displayForTeamB(scoreB);
@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
     {   scoreB++;
         displayForTeamB(scoreB);
 
+    }
+    //reset all the score
+    public void reset(View view)
+    {  scoreA = 0;
+        scoreB = 0;
+        displayForTeamA(scoreA);
+        displayForTeamB(scoreB);
     }
 
     /**
